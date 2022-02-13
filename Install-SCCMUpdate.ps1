@@ -90,12 +90,13 @@ function Install-SCCMUpdate {
                 }
                 catch {
                     throw $_
+                    Write-Error -Message "PSSession error connecting computer '$($ComputerName)'"
                 }
             }
             Remove-PSSession -Session $PSSession
         }
         else {
-            Write-Warning -Message "Cannot connect to '$($ComputerName)'"
+            Write-Warning -Message "Command  ""Test-Connection -TargetName '$($ComputerName)' -Count 1 -TimeoutSeconds 1 -Quiet""  failed"
         }
     }
 }
