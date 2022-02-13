@@ -34,7 +34,7 @@ This will start the installation process of all in SCCM Software Center availabl
 **.EXAMPLE**  
 
 ```Powershell
-PS C:\> $Cred = Get-Credential -UserName 'domain\DomainAdmin'
+PS C:\> $Cred = Get-Credential -UserName 'domain\DomainAdmin'  # ;-)
 PS C:\> Install-SCCMUpdate -ComputerName 'DC_01','DC_02' -Credential $Cred
 ```
   
