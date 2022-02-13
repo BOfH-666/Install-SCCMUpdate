@@ -15,7 +15,7 @@ A credential object representing an account with adminstrative rights to the tar
 **.PARAMETER  ExcludeArticleID**  
 A comma separated list of article IDs excluded from installation.  
   
-**.EXAMPLE**  
+## .EXAMPLE 1  
 
 ```Powershell
 PS C:\> Install-SCCMUpdate
@@ -23,7 +23,7 @@ PS C:\> Install-SCCMUpdate
   
 This will start the installation process of all in SCCM Software Center available updates on the local computer.  
   
-**.EXAMPLE**  
+## .EXAMPLE 2  
 
 ```Powershell
 PS C:\> Install-SCCMUpdate -ComputerName 'RemoteComputer01','RemoteComputer02'
@@ -31,7 +31,7 @@ PS C:\> Install-SCCMUpdate -ComputerName 'RemoteComputer01','RemoteComputer02'
   
 This will start the installation process of all in SCCM Software Center available updates on both specified computers  
   
-**.EXAMPLE**  
+## .EXAMPLE 3  
 
 ```Powershell
 PS C:\> $Cred = Get-Credential -UserName 'domain\DomainAdmin'  # ;-)
@@ -40,7 +40,7 @@ PS C:\> Install-SCCMUpdate -ComputerName 'DC_01','DC_02' -Credential $Cred
   
 This will start the installation process of all in SCCM Software Center available updates on both specified domain controllers.  
   
-**.EXAMPLE**  
+## .EXAMPLE 4  
 
 ```Powershell
 PS C:\> Install-SCCMUpdate -ComputerName 'RemoteComputer37','RemoteComputer73' -Exclude 3012973
